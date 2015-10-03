@@ -29,18 +29,18 @@ public class ForgeEventHandler {
 	 * If the entities happen to be the Dragon or Wither, they will drop heart containers (if users configured my mod to allow it)
 	 * @param event
 	 */
-	@SubscribeEvent
-	public void onEntityLivingDeath(LivingDeathEvent event) {
-		if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
+	//@SubscribeEvent
+	//public void onEntityLivingDeath(LivingDeathEvent event) {
+	//	if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
 			//bosses drop 1 heart container each
 			//must be manually tested
-			if(mod_moreHealthEnhanced.HeartContainersAndPieces){
-				if(event.entity instanceof EntityDragon || event.entity instanceof EntityWither){
-					event.entity.entityDropItem(new ItemStack(mod_moreHealthEnhanced.heartContainer),0.0F);
-				}
-			}
-		}
-	}
+	//		if(mod_moreHealthEnhanced.HeartContainersAndPieces){
+	//			if(event.entity instanceof EntityDragon || event.entity instanceof EntityWither){
+	//				event.entity.entityDropItem(new ItemStack(mod_moreHealthEnhanced.heartContainer),0.0F);
+	//			}
+	//		}
+	//	}
+	//}
 
 	/**
 	 * My function here will be called when any living entity has his living update event, but will only continue
